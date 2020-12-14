@@ -15,10 +15,10 @@ after_success:
   - docker build -t fazale/multi-nginx ./nginx
   - docker build -t fazale/multi-server ./server
   - docker build -t fazale/multi-worker ./worker
-#   # Log in to the docker CLI
-#   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-#   # Take those images and push them to docker hub
-#   - docker push stephengrider/multi-client
-#   - docker push stephengrider/multi-nginx
-#   - docker push stephengrider/multi-server
-#   - docker push stephengrider/multi-worker
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to docker hub
+  - docker push fazale/multi-client
+  - docker push fazale/multi-nginx
+  - docker push fazale/multi-server
+  - docker push fazale/multi-worker
